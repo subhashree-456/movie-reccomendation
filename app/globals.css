@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-foxBg text-slate-100 antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .fox-panel {
+    @apply bg-foxPanel border border-foxBorder rounded-xl shadow-fox;
+  }
+  
+  .fox-input {
+    @apply w-full bg-[#111827] border border-foxBorder rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-foxAccent focus:ring-1 focus:ring-foxAccent transition-all;
+  }
+  
+  .btn-primary {
+    @apply rounded-lg bg-foxAccent px-6 py-3 font-semibold text-white transition-all hover:bg-foxAccentHover shadow-lg shadow-orange-500/20 active:scale-95 cursor-pointer;
+  }
+}
+
+/* Custom Scrollbar for horizontal scrolling sections */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
